@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const pool = require('./modules/pool');
@@ -76,7 +77,9 @@ app.put('/tasks/:id', (req, res) => {
     });
 });
 
-const port = 3000;
+// process.env
+
+const port = process.env.PORT || 3000;
 
 console.log(`We're going to listen on port`, port);
 app.listen(port, () => {

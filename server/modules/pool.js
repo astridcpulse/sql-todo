@@ -1,7 +1,7 @@
 const pg = require('pg');
 
 let pool = new pg.Pool({
-  database: "weekend-to-do-app"
+  database: "cloud-todo"
 });
 
 module.exports = pool;
